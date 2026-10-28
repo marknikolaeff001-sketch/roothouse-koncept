@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Root House — концепт сайта</title>
+<meta name="description" content="Концепт сайта для компании Root House, сделан для эфира Марка Николаева. Не официальный сайт компании.">
+<style>
+@font-face{font-family:Onest;font-weight:100 900;font-display:swap;src:url(fonts/onest-cyrillic.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:Onest;font-weight:100 900;font-display:swap;src:url(fonts/onest-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{
+  --sage:#56645a; --sage-d:#3d4840; --sage-l:#e3e7e1;
+  --sand:#d8ccb9; --sand-d:#b9a98f; --cream:#f5f1ea; --paper:#fffdf9;
+  --ink:#1f241f; --muted:#5d655d; --line:#d9d3c7;
+  --accent:#e2683a; --accent-d:#c9542a;
+  --r:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:Onest,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:18px;line-height:1.55;color:var(--ink);background:var(--cream)}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+
+/* плашка концепта */
+.concept{background:#151815;color:#cfd3cc;font-size:13px;line-height:1.4;padding:9px 20px;text-align:center}
+.concept b{color:#fff;font-weight:600}
+.concept a{color:#fff}
+
+/* шапка */
+.top{position:sticky;top:0;z-index:20;background:rgba(61,72,64,.96);backdrop-filter:blur(6px);color:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+.logo b{font-weight:700;letter-spacing:.08em;font-size:20px}
+.logo span{font-size:11px;letter-spacing:.32em;color:var(--sand);margin-top:4px}
+.nav{display:none;gap:26px;font-size:15px}
+.nav a{text-decoration:none;color:#e9ece7}
+.nav a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:999px;background:var(--accent);color:#fff;font:600 16px/1 Onest,sans-serif;padding:16px 26px;text-decoration:none;transition:background .2s}
+.btn:hover{background:var(--accent-d)}
+.btn.small{padding:11px 18px;font-size:14px}
+.btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55)}
+.btn.ghost:hover{background:rgba(255,255,255,.1)}
+
+/* первый экран */
+.hero{position:relative;color:#fff;background:#2b332d url(img/hero.jpg) center 40%/cover no-repeat}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(30,36,32,.78) 0%,rgba(30,36,32,.45) 70%,rgba(30,36,32,.3) 100%),linear-gradient(180deg,rgba(30,36,32,.25) 0%,rgba(30,36,32,.35) 55%,rgba(30,36,32,.92) 100%)}
+.hero .wrap{position:relative;padding-top:56px;padding-bottom:40px}
+.pill{display:inline-block;font-size:13px;letter-spacing:.04em;padding:7px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.45)}
+.hero h1{font-size:40px;line-height:1.06;font-weight:600;letter-spacing:-.02em;margin:22px 0 18px;max-width:880px}
+.hero h1 em{font-style:normal;color:var(--sand)}
+.hero .lead{font-size:19px;color:#e7eae5;max-width:640px}
+.hero .lead small{display:block;font-size:14px;color:#c4cac2;margin-top:8px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 36px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.2);border-radius:16px;overflow:hidden}
+.facts div{background:rgba(35,42,37,.78);padding:16px}
+.facts b{display:block;font-size:26px;font-weight:600;color:var(--sand);line-height:1.1}
+.facts span{font-size:14px;color:#dfe3dc}
+.caption{font-size:12px;color:#b9c0b7;margin-top:14px}
+
+/* секции */
+section{padding:64px 0}
+.kicker{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);font-weight:600}
+h2{font-size:32px;line-height:1.12;font-weight:600;letter-spacing:-.015em;margin:12px 0 14px;max-width:820px}
+.sub{color:var(--muted);max-width:700px}
+.dark{background:var(--sage-d);color:#fff}
+.dark .kicker{color:var(--sand)}
+.dark .sub{color:#cdd3cb}
+.paper{background:var(--paper)}
+
+/* страхи */
+.fears{display:grid;gap:16px;margin-top:32px}
+.fear{background:var(--paper);border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+.fear q{display:block;quotes:none;padding:22px 22px 18px;font-size:17px;line-height:1.5;color:#3a3f3a;background:#efe9df}
+.fear q:before{content:"«"}.fear q:after{content:"»"}
+.fear .who{display:block;font-size:13px;color:var(--muted);padding:0 22px 16px;background:#efe9df}
+.fear .ans{padding:20px 22px 22px}
+.fear .ans b{display:block;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--sage);margin-bottom:6px}
+.fear .ans p{font-size:18px;font-weight:500}
+.fear .ans small{display:block;font-size:13px;color:var(--muted);margin-top:8px}
+
+/* 30% */
+.money{display:grid;gap:28px;margin-top:28px;align-items:start}
+.big{font-size:120px;line-height:.9;font-weight:300;letter-spacing:-.04em;color:var(--sand)}
+.big small{display:block;font-size:17px;letter-spacing:0;color:#cdd3cb;font-weight:400;margin-top:12px;line-height:1.4}
+blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 18px;font-size:19px;line-height:1.5;color:#eef0ec}
+blockquote cite{display:block;font-style:normal;font-size:14px;color:#bfc6bd;margin-top:10px}
+.incl{display:grid;gap:10px;margin-top:22px}
+.incl div{background:rgba(255,255,255,.07);border-radius:14px;padding:14px 16px;font-size:17px}
+.incl div b{color:var(--sand);font-weight:600}
+.link{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-weight:600;text-decoration:none;border-bottom:1.5px solid currentColor;padding-bottom:2px}
+
+/* сроки */
+.steps{list-style:none;margin-top:32px;display:grid;gap:12px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px}
+.steps li:before{counter-increment:s;content:counter(s,decimal-leading-zero);display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:var(--sage-l);color:var(--sage-d);font-weight:600;font-size:15px}
+.steps b{display:block;font-size:18px;font-weight:600}
+.steps span{font-size:15px;color:var(--muted)}
+.steps .t{color:var(--accent-d);font-weight:600}
+.total{margin-top:18px;background:var(--sage);color:#fff;border-radius:var(--r);padding:22px}
+.total b{font-size:30px;font-weight:600;color:var(--sand);display:block;line-height:1.15}
+.total p{color:#e1e5df;margin-top:6px;font-size:16px}
+.note{margin-top:18px;font-size:16px;color:var(--muted);background:var(--paper);border-radius:16px;padding:16px 18px;border:1px dashed var(--sand-d)}
+
+/* проверьте нас */
+.checks{display:grid;gap:14px;margin-top:30px}
+.check{background:var(--paper);border-radius:var(--r);padding:22px;border:1px solid var(--line)}
+.check b{display:block;font-size:20px;font-weight:600;line-height:1.25;margin-bottom:8px}
+.check p{font-size:16px;color:var(--muted)}
+.check small{display:block;font-size:13px;color:var(--sage);margin-top:10px}
+
+/* дома */
+.houses{display:grid;gap:16px;margin-top:30px}
+.house{background:var(--paper);border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+.house img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.house div{padding:16px 18px 18px}
+.house b{display:block;font-size:18px;font-weight:600}
+.house span{font-size:14px;color:var(--muted)}
+
+/* отзывы */
+.reviews{display:grid;gap:14px;margin-top:28px}
+.review{background:rgba(255,255,255,.07);border-radius:var(--r);padding:22px}
+.review p{font-size:18px;line-height:1.5}
+.review span{display:block;font-size:13px;color:#bfc6bd;margin-top:12px}
+.rating{margin-top:18px;font-size:14px;color:#cdd3cb}
+
+/* купить или построить */
+.choose{display:grid;gap:14px;margin-top:28px}
+.opt{border-radius:var(--r);padding:24px;background:var(--paper);border:1px solid var(--line)}
+.opt b{display:block;font-size:22px;font-weight:600;margin-bottom:6px}
+.opt p{color:var(--muted);font-size:16px}
+
+/* финал */
+.final{background:var(--sage-d) url(img/interior.jpg) center/cover;position:relative;color:#fff}
+.final:before{content:"";position:absolute;inset:0;background:rgba(35,42,37,.86)}
+.final .wrap{position:relative;text-align:left}
+.final h2{color:#fff}
+.final .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+
+footer{background:#151815;color:#9da59b;font-size:13px;line-height:1.6;padding:28px 0}
+footer b{color:#e3e6e1;font-weight:600}
+footer a{color:#e3e6e1}
+
+@media (min-width:760px){
+  body{font-size:19px}
+  .nav{display:flex}
+  .hero .wrap{padding-top:96px;padding-bottom:56px}
+  .hero h1{font-size:64px}
+  .facts{grid-template-columns:repeat(4,1fr)}
+  section{padding:96px 0}
+  h2{font-size:46px}
+  .fears{grid-template-columns:1fr 1fr}
+  .money{grid-template-columns:.8fr 1.2fr;gap:56px}
+  .big{font-size:200px}
+  .incl{grid-template-columns:1fr 1fr}
+  .checks{grid-template-columns:1fr 1fr}
+  .houses{grid-template-columns:repeat(3,1fr)}
+  .reviews{grid-template-columns:repeat(3,1fr)}
+  .choose{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="concept"><b>Концепт сайта</b>, сделан для эфира Марка Николаева 29.10.2026. Это не официальный сайт компании — официальный: <a href="https://roothouse.ru/" target="_blank" rel="noopener">roothouse.ru</a></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#"><b>ROOT HOUSE</b><span>ДОМА ИЗ БРУСА</span></a>
+    <nav class="nav">
+      <a href="#price">Цена</a>
+      <a href="#time">Сроки</a>
+      <a href="#check">Проверить нас</a>
+      <a href="#houses">Дома</a>
+    </nav>
+    <a class="btn small" href="#final">Посчитать дом</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="pill">Дома из сибирского клеёного бруса · с 2011 года</span>
+    <h1>Дом, цена которого <em>не вырастет</em> после подписания договора</h1>
+    <p class="lead">Подорожание материалов на рынке цену не меняет. Срок называем честный. А сколько зарабатываем на вашем доме — говорим открыто.
+      <small>Исключение — если вы сами меняете проект или задание.</small></p>
+    <div class="ctas">
+      <a class="btn" href="#final">Посчитать мой дом</a>
+      <a class="btn ghost" href="#price">Сколько мы зарабатываем</a>
+    </div>
+    <div class="facts">
+      <div><b>с 2011</b><span>строим дома из клеёного бруса</span></div>
+      <div><b>5 лет</b><span>гарантия на стройку по договору</span></div>
+      <div><b>50 лет</b><span>гарантия на брус по ТУ</span></div>
+      <div><b>1 подрядчик</b><span>ответственность и гарантия за все этапы</span></div>
+    </div>
+    <p class="caption">На фото — пристрой из клеёного бруса Root House, Иркутск, 2021.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">Чего боятся, когда строят дом</span>
+    <h2>Вы боитесь не зря. Вот что об этом пишут люди — и что делаем мы</h2>
+    <p class="sub">Цитаты взяты дословно из обсуждений в Т—Ж и на Пикабу. Ответы — из договора и правил компании.</p>
+    <div class="fears">
+      <div class="fear">
+        <q>Цены на материалы выросли и теперь нам нужно дополнительно еще почти 200 тысяч рублей</q>
+        <span class="who">слова подрядчика в пересказе заказчика · Пикабу, 2021</span>
+        <div class="ans"><b>У нас</b><p>Цена фиксируется после подписания договора и внесения предоплаты. Подорожание материалов её не меняет.</p><small>Меняется, только если вы сами меняете проект или задание.</small></div>
+      </div>
+      <div class="fear">
+        <q>…начинает кормить завтраками, уходить от прямых вопросов. … Не встречается, увиливает, не берет трубку.</q>
+        <span class="who">руководитель группы пострадавших заказчиков ИЖС · Т—Ж, 2026</span>
+        <div class="ans"><b>У нас</b><p>График работ фиксируем в договоре. У каждого дома общий чат: вы, менеджер проекта, архитектор и директор компании. Фото и видео с площадки — там же.</p></div>
+      </div>
+      <div class="fear">
+        <q>…говорят, есть дома, которые построенные без косяков, но никто их не видел</q>
+        <span class="who">читатель Т—Ж, 2022</span>
+        <div class="ans"><b>У нас</b><p>Приезжайте и посмотрите. В нашем посёлке на 19-м км Байкальского тракта стоят дома на продажу — их можно смотреть без хозяев.</p></div>
+      </div>
+      <div class="fear">
+        <q>…аванс и выкинув симку - типичная модель бизнеса многих в строительном бизнесе сегодня.</q>
+        <span class="who">комментарий на Пикабу, 2025</span>
+        <div class="ans"><b>У нас</b><p>Компания работает с 2011 года, два офиса — в Иркутске и Москве. Гарантия на строительство — 5 лет, и она записана в договоре.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="price">
+  <div class="wrap">
+    <span class="kicker">Деньги</span>
+    <h2>Сколько мы зарабатываем на вашем доме</h2>
+    <div class="money">
+      <div class="big">30%<small>наценка компании от прямых затрат на стройку</small></div>
+      <div>
+        <blockquote>Я открыто прямо всегда говорю, маржинальность нашей компании 30%. … Я в эти деньги умудряюсь взять на себя ответственность, организовать эту работу, заплатить зарплату всем работникам, бухгалтерию, налоги заплатить. … И при этом нести гарантию.
+          <cite>Сергей Корнев, генеральный директор Root House, подкаст «Строители об этом молчат»</cite></blockquote>
+        <div class="incl">
+          <div><b>Прораб и организация.</b> Своего нанимать не нужно, его работа уже в этих 30%.</div>
+          <div><b>Закупка.</b> Часть материалов компания покупает дешевле, чем вы в магазине.</div>
+          <div><b>Риски.</b> Не доехало, сломалось, не хватило — это решаем мы, а не вы.</div>
+          <div><b>Гарантия.</b> 5 лет на строительство по договору.</div>
+        </div>
+        <a class="link" href="https://www.youtube.com/watch?v=WYVv0mzdSKA&t=1186s" target="_blank" rel="noopener">Смотреть этот фрагмент подкаста, 19:46 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="time">
+  <div class="wrap">
+    <span class="kicker">Сроки</span>
+    <h2>Сколько на самом деле строится дом</h2>
+    <p class="sub">Когда строитель обещает «дом за полтора месяца», он говорит о коробке. До переезда этапов больше — называем их сразу.</p>
+    <ol class="steps">
+      <li><div><b>Проект</b><span><span class="t">около месяца</span> — планировка под участок и вашу семью</span></div></li>
+      <li><div><b>Смета</b><span><span class="t">около недели</span> — состав работ и цена, которую фиксируем в договоре</span></div></li>
+      <li><div><b>Подготовка и фундамент</b><span>В Сибири фундамент нужно успеть до зимы: иначе следующий шанс — в мае, когда оттает грунт</span></div></li>
+      <li><div><b>Сборка дома</b><span><span class="t">около полутора месяцев</span> — стены и кровля, это и есть «коробка»</span></div></li>
+      <li><div><b>Отделка</b><span><span class="t">около года</span>, если есть дизайн-проект. Без него — дольше</span></div></li>
+    </ol>
+    <div class="total"><b>В среднем полтора года до готового дома</b><p>Так говорит Сергей Корнев: «это вообще идеальная ситуация, на самом деле, если говорить про дом полностью».</p></div>
+    <p class="note">Пример из практики: дом 93 м² в Аршане для многодетной семьи после наводнения. Работы на готовом фундаменте начались в марте, ключи передали 29 мая 2020 года.</p>
+    <a class="link" href="https://www.youtube.com/watch?v=WYVv0mzdSKA&t=1382s" target="_blank" rel="noopener">Смотреть, как Сергей объясняет сроки, 23:02 →</a>
+  </div>
+</section>
+
+<section class="paper" id="check">
+  <div class="wrap">
+    <span class="kicker">Проверьте нас до договора</span>
+    <h2>Не верьте на слово. Вот как нас проверить</h2>
+    <div class="checks">
+      <div class="check"><b>Приезжайте в посёлок</b><p>На 19-м км Байкальского тракта мы строим дома на продажу. Они никому не принадлежат — заходите и смотрите. Готовый дом «под отделку» с участком там стоит 15,9 млн ₽.</p><small>Цена — с сайта компании, уточняйте актуальную</small></div>
+      <div class="check"><b>Позвоните нашим заказчикам</b><p>Дадим пять номеров на выбор. Заранее предупредим людей, что вы позвоните, — разговаривайте сами.</p><small>Из подкаста, 25:13</small></div>
+      <div class="check"><b>Наймите независимый технадзор</b><p>Мы сами это советуем — даже если вы строите с нами. Он проверит смету и будет приезжать на каждый этап.</p><small>Из подкаста, 18:57</small></div>
+      <div class="check"><b>Один подрядчик на всё</b><p>Архитектура, конструктив, стройка, инженерия и отделка — в одной штатной команде. Отвечает за всё одна компания, а не пять бригад.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="houses">
+  <div class="wrap">
+    <span class="kicker">Построено</span>
+    <h2>Дома, которые мы уже сдали</h2>
+    <p class="sub">Фото настоящих объектов из портфолио компании.</p>
+    <div class="houses">
+      <div class="house"><img src="img/dom-220.jpg" alt="Двухэтажный дом с гаражом из клеёного бруса зимой" loading="lazy"><div><b>Дом с гаражом, 220 м²</b><span>Под Иркутском · 2016 · под ключ</span></div></div>
+      <div class="house"><img src="img/dom-416.jpg" alt="Комбинированный дом: первый этаж из кирпича, второй из бруса" loading="lazy"><div><b>Дом из камня и дерева, 416 м²</b><span>2021 · под ключ</span></div></div>
+      <div class="house"><img src="img/dom-255.jpg" alt="Дом из рыжего клеёного бруса с острыми щипцами" loading="lazy"><div><b>Дом с цокольным этажом, 255 м²</b><span>Бурятия, берег Байкала · 2016 · под ключ</span></div></div>
+      <div class="house"><img src="img/dom-110.jpg" alt="Одноэтажный дом из бруса, окрашенного в бежевый" loading="lazy"><div><b>Одноэтажный дом, 110 м²</b><span>Под Иркутском · 2020 · под ключ</span></div></div>
+      <div class="house"><img src="img/dom-346.jpg" alt="Современный белый дом с плоской кровлей среди сосен" loading="lazy"><div><b>Дом с плоской кровлей, 346 м²</b><span>Под Иркутском · 2022</span></div></div>
+      <div class="house"><img src="img/banya.jpg" alt="Бассейн в пристрое к бане из клеёного бруса" loading="lazy"><div><b>Бассейн при бане, 4 × 16 м</b><span>120 м² · 2021 · под ключ</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <span class="kicker">Отзывы</span>
+    <h2>Что пишут заказчики</h2>
+    <div class="reviews">
+      <div class="review"><p>«Прораб контролировал каждый этап, материалы использовали самые качественные. Получилось даже лучше, чем ожидал!»</p><span>Яндекс Карты · 16.07.2025</span></div>
+      <div class="review"><p>«Если вы хотите построить дом без хлопот, то это ваша компания.»</p><span>Яндекс Карты · 21.12.2025</span></div>
+      <div class="review"><p>«Ответственная компания! Выполняют всё в срок, очень отзывчивые люди в компании.»</p><span>Яндекс Карты · 07.05.2024</span></div>
+    </div>
+    <p class="rating">Рейтинг на Яндекс Картах на 27.10.2026: «Root House» — 4,3, «Строй Комфорт» — 4,2.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">Купить или построить</span>
+    <h2>«С точки зрения финансов, купить дешевле»</h2>
+    <p class="sub">Это тоже слова Сергея Корнева. Дальше он говорит: «С точки зрения получения того, что ты хочешь, лучше построить. Ты никогда не купишь то, что тебя устроит на 100%». Поэтому у нас есть оба пути.</p>
+    <div class="choose">
+      <div class="opt"><b>Купить готовый</b><p>Дом в нашем посёлке на Байкальском тракте: приезжаете, смотрите, покупаете.</p></div>
+      <div class="opt"><b>Построить свой</b><p>Проект под ваш участок и семью, цена в договоре, гарантия 5 лет.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="final">
+  <div class="wrap">
+    <span class="kicker">Следующий шаг</span>
+    <h2>Посчитаем ваш дом: проект, смета и честный срок</h2>
+    <p class="sub">Расскажите, какой дом хотите, и получите ориентир по стоимости и консультацию архитектора.</p>
+    <div class="ctas">
+      <a class="btn" href="https://roothouse.ru/" target="_blank" rel="noopener">Оставить заявку на официальном сайте</a>
+      <a class="btn ghost" href="https://www.youtube.com/watch?v=WYVv0mzdSKA" target="_blank" rel="noopener">Смотреть подкаст</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b>Это концепт.</b> Сайт собран для эфира Марка Николаева 29.10.2026 как пример работы ИИ-редактора. Компания Root House его не заказывала и не утверждала. Официальный сайт — <a href="https://roothouse.ru/" target="_blank" rel="noopener">roothouse.ru</a>.</p>
+    <p style="margin-top:10px">Откуда тексты: сайт roothouse.ru, подкаст «Строители об этом молчат» на YouTube-канале «Загородные дома с Root House», отзывы на Яндекс Картах, обсуждения в Т—Ж и на Пикабу. Фото — из портфолио на сайте компании. Собрано 27.10.2026.</p>
+  </div>
+</footer>
+
+</body>
+</html>
