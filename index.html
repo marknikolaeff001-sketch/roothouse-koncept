@@ -69,16 +69,18 @@ h2{font-size:32px;line-height:1.12;font-weight:600;letter-spacing:-.015em;margin
 .dark .sub{color:#cdd3cb}
 .paper{background:var(--paper)}
 
-/* страхи */
-.fears{display:grid;gap:16px;margin-top:32px}
-.fear{background:var(--paper);border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
-.fear q{display:block;quotes:none;padding:22px 22px 18px;font-size:17px;line-height:1.5;color:#3a3f3a;background:#efe9df}
-.fear q:before{content:"«"}.fear q:after{content:"»"}
-.fear .who{display:block;font-size:13px;color:var(--muted);padding:0 22px 16px;background:#efe9df}
-.fear .ans{padding:20px 22px 22px}
-.fear .ans b{display:block;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--sage);margin-bottom:6px}
-.fear .ans p{font-size:18px;font-weight:500}
-.fear .ans small{display:block;font-size:13px;color:var(--muted);margin-top:8px}
+/* главные обещания: по одному на блок */
+.promise{padding:56px 0}
+.p-num{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-d);font-weight:600}
+.promise h2{font-size:36px;line-height:1.08;margin:12px 0 0;max-width:900px}
+.p-body{display:grid;gap:22px;margin-top:22px}
+.p-text p{font-size:19px;line-height:1.55}
+.p-text small{display:block;font-size:13px;color:var(--muted);margin-top:8px}
+.p-why{border-left:3px solid var(--sand-d);padding:2px 0 2px 18px}
+.p-why b{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:6px}
+.p-why q{display:block;quotes:none;font-size:16px;line-height:1.5;color:#3a3f3a}
+.p-why q:before{content:"«"}.p-why q:after{content:"»"}
+.p-why small{display:block;font-size:13px;color:var(--muted);margin-top:6px}
 
 /* 30% */
 .money{display:grid;gap:28px;margin-top:28px;align-items:start}
@@ -150,11 +152,13 @@ footer a{color:#e3e6e1}
   .facts{grid-template-columns:repeat(4,1fr)}
   section{padding:96px 0}
   h2{font-size:46px}
-  .fears{grid-template-columns:1fr 1fr}
+  .promise{padding:96px 0}
+  .promise h2{font-size:60px}
+  .p-body{grid-template-columns:1.1fr .9fr;gap:56px;margin-top:34px}
   .money{grid-template-columns:.8fr 1.2fr;gap:56px}
   .big{font-size:200px}
   .incl{grid-template-columns:1fr 1fr}
-  .checks{grid-template-columns:1fr 1fr}
+  .checks{grid-template-columns:repeat(3,1fr)}
   .houses{grid-template-columns:repeat(3,1fr)}
   .reviews{grid-template-columns:repeat(3,1fr)}
   .choose{grid-template-columns:1fr 1fr}
@@ -169,7 +173,7 @@ footer a{color:#e3e6e1}
   <div class="wrap">
     <a class="logo" href="#"><b>ROOT HOUSE</b><span>ДОМА ИЗ БРУСА</span></a>
     <nav class="nav">
-      <a href="#price">Цена</a>
+      <a href="#cena">Цена</a>
       <a href="#time">Сроки</a>
       <a href="#check">Проверить нас</a>
       <a href="#houses">Дома</a>
@@ -215,32 +219,46 @@ footer a{color:#e3e6e1}
 </section>
 
 
-<section>
+<section class="promise" id="cena">
   <div class="wrap">
-    <span class="kicker">Чего боятся, когда строят дом</span>
-    <h2>Вы боитесь не зря. Вот что об этом пишут люди — и что делаем мы</h2>
-    <p class="sub">Цитаты взяты дословно из обсуждений в Т—Ж и на Пикабу. Ответы — из договора и правил компании.</p>
-    <div class="fears">
-      <div class="fear">
-        <q>Цены на материалы выросли и теперь нам нужно дополнительно еще почти 200 тысяч рублей</q>
-        <span class="who">слова подрядчика в пересказе заказчика · Пикабу, 2021</span>
-        <div class="ans"><b>У нас</b><p>Цена фиксируется после подписания договора и внесения предоплаты. Подорожание материалов её не меняет.</p><small>Меняется, только если вы сами меняете проект или задание.</small></div>
-      </div>
-      <div class="fear">
-        <q>…начинает кормить завтраками, уходить от прямых вопросов. … Не встречается, увиливает, не берет трубку.</q>
-        <span class="who">руководитель группы пострадавших заказчиков ИЖС · Т—Ж, 2026</span>
-        <div class="ans"><b>У нас</b><p>График работ фиксируем в договоре. У каждого дома общий чат: вы, менеджер проекта, архитектор и директор компании. Фото и видео с площадки — там же.</p></div>
-      </div>
-      <div class="fear">
-        <q>…говорят, есть дома, которые построенные без косяков, но никто их не видел</q>
-        <span class="who">читатель Т—Ж, 2022</span>
-        <div class="ans"><b>У нас</b><p>Приезжайте и посмотрите. В нашем посёлке на 19-м км Байкальского тракта стоят дома на продажу — их можно смотреть без хозяев.</p></div>
-      </div>
-      <div class="fear">
-        <q>…аванс и выкинув симку - типичная модель бизнеса многих в строительном бизнесе сегодня.</q>
-        <span class="who">комментарий на Пикабу, 2025</span>
-        <div class="ans"><b>У нас</b><p>Компания работает с 2011 года, два офиса — в Иркутске и Москве. Гарантия на строительство — 5 лет, и она записана в договоре.</p></div>
-      </div>
+    <span class="p-num">01 · Цена</span>
+    <h2>Цена фиксируется после подписания договора</h2>
+    <div class="p-body">
+      <div class="p-text"><p>С этого момента и после предоплаты подорожание материалов на рынке её не меняет. Пересчитать цену можно, только если вы сами меняете проект или техническое задание.</p></div>
+      <div class="p-why"><b>Почему это важно</b><q>Цены на материалы выросли и теперь нам нужно дополнительно еще почти 200 тысяч рублей</q><small>слова подрядчика в пересказе заказчика · Пикабу, 2021</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="promise paper" id="grafik">
+  <div class="wrap">
+    <span class="p-num">02 · Сроки</span>
+    <h2>График работ фиксируем в&nbsp;договоре</h2>
+    <div class="p-body">
+      <div class="p-text"><p>Как идут работы, видно в общем чате проекта. В нём вы, менеджер проекта, архитектор и директор компании. Там можно задать вопрос всей команде и получить фото и видео с площадки.</p></div>
+      <div class="p-why"><b>Почему это важно</b><q>…начинает кормить завтраками, уходить от прямых вопросов. … Не встречается, увиливает, не берет трубку.</q><small>руководитель группы пострадавших заказчиков ИЖС · Т—Ж, 2026</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="promise" id="garantiya">
+  <div class="wrap">
+    <span class="p-num">03 · Гарантия</span>
+    <h2>Гарантия на дом — 5&nbsp;лет по&nbsp;договору</h2>
+    <div class="p-body">
+      <div class="p-text"><p>На клеёный брус — 50 лет. Компания работает с 2011 года и ни разу не меняла юрлицо, директор и учредитель всё это время один — Сергей Корнев. Это видно в открытом реестре. Офисы — в Иркутске и Москве.</p></div>
+      <div class="p-why"><b>Почему это важно</b><q>…аванс и выкинув симку - типичная модель бизнеса многих в строительном бизнесе сегодня.</q><small>комментарий на Пикабу, 2025</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="promise paper" id="poselok">
+  <div class="wrap">
+    <span class="p-num">04 · Посмотреть вживую</span>
+    <h2>Готовые дома можно посмотреть до договора</h2>
+    <div class="p-body">
+      <div class="p-text"><p>Наш посёлок — на 19-м км Байкальского тракта, в 12 минутах от Иркутска. Там стоят дома на продажу: приезжайте и посмотрите, как мы строим. Готовый дом 102 м² с участком 6 соток — 15,9 млн ₽.</p><small>Цена — с сайта компании, уточняйте актуальную</small></div>
+      <div class="p-why"><b>Почему это важно</b><q>…говорят, есть дома, которые построенные без косяков, но никто их не видел</q><small>читатель Т—Ж, 2022</small></div>
     </div>
   </div>
 </section>
@@ -289,7 +307,6 @@ footer a{color:#e3e6e1}
     <span class="kicker">Проверьте нас до договора</span>
     <h2>Не верьте на слово. Вот как нас проверить</h2>
     <div class="checks">
-      <div class="check"><b>Приезжайте в посёлок</b><p>На 19-м км Байкальского тракта мы строим дома на продажу. Они никому не принадлежат — заходите и смотрите. Готовый дом «под отделку» с участком там стоит 15,9 млн ₽.</p><small>Цена — с сайта компании, уточняйте актуальную</small></div>
       <div class="check"><b>Позвоните нашим заказчикам</b><p>Дадим пять номеров на выбор. Заранее предупредим людей, что вы позвоните, — разговаривайте сами.</p><small>Из подкаста, 25:13</small></div>
       <div class="check"><b>Наймите независимый технадзор</b><p>Мы сами это советуем — даже если вы строите с нами. Он проверит смету и будет приезжать на каждый этап.</p><small>Из подкаста, 18:57</small></div>
       <div class="check"><b>Один подрядчик на всё</b><p>Архитектура, конструктив, стройка, инженерия и отделка — в одной штатной команде. Отвечает за всё одна компания, а не пять бригад.</p></div>
